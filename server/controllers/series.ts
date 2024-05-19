@@ -1,9 +1,9 @@
 import { db } from "../neon";
 import {Result, Series as SeriesType, SeriesWithEpisodes} from "../dto";
-import {Series} from "~/server/models/series";
+import {Series} from "@/server/models/series";
 import {eq} from "drizzle-orm";
-import {Episode} from "~/server/models/episode";
-import {getImageUrl} from "~/server/config";
+import {Episode} from "@/server/models/episode";
+import {getImageUrl} from "@/server/config";
 
 export async function getSeriesList(): Promise<SeriesType[]> {
     return db.query.Series.findMany();

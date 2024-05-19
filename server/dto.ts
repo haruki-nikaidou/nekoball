@@ -12,7 +12,6 @@ export interface SeriesWithEpisodes extends Series {
 export interface Episode {
     belongs_to_series_id: number;
     sort_in_series: number;
-    name: string;
     video_link: string;
 }
 

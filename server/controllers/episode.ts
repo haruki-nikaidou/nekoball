@@ -1,6 +1,6 @@
 import {Episode as EpisodeType, Result} from "../dto";
 import {db} from "../neon";
-import {Episode} from "~/server/models/episode";
+import {Episode} from "@/server/models/episode";
 import {and, eq} from "drizzle-orm";
 
 export async function getEpisodeBySort(belongs: number, sort: number): Promise<Result<EpisodeType>> {
