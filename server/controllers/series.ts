@@ -6,7 +6,7 @@ import {Episode} from "@/server/models/episode";
 import {getImageUrl} from "@/server/config";
 
 export async function getSeriesList(): Promise<SeriesType[]> {
-    return db.query.Series.findMany();
+    return db.select().from(Series);
 }
 
 export async function getSeriesById(id: number): Promise<Result<SeriesWithEpisodes>> {
